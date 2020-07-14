@@ -36,3 +36,16 @@ If service C needs to access data in service A and service B,
   - :+1: service D will be extremely fast
   - :-1: data duplication
   - :-1: hard to understand
+
+## A mini Microservice app
+
+### Handle CORS errors
+
+When the browser is trying to make a request to a server with different `domain`/`domain with port`/`domain with subdomain`, the browser will automatically reject unless the response from other origins includes the right CORS headers.
+
+### Event bus/Event broker
+
+- Many different implementations, RabbitMQ, Kafka, NATS...
+- Receives events, publishes them to listeners
+- Many different subtle feature that make async communication way easier or way harder
+- We're going to build our own event bus using Express. It'll not implement the vast majority of feature a normal bus has
