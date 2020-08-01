@@ -9,7 +9,7 @@ export default ({ postId }) => {
   }
   useEffect(() => {
     fetchComments()
-  }, [])
+  })
 
   const renderComments = comments.map(comment => (
     <li key={comment.id}>{comment.content}</li>
