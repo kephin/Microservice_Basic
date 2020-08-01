@@ -45,7 +45,9 @@ When the browser is trying to make a request to a server with different `domain`
 
 ### Event bus/Event broker
 
-- Many different implementations, RabbitMQ, Kafka, NATS...
+With asynchronous communication we introduce **Event broker**. And the goal of this event broker is to **receive events from some different services and route them off to all the other services**.
+
+- Many different implementations, ex. RabbitMQ, Kafka, NATS...
 - Receives events, publishes them to listeners
 - Many different subtle feature that make async communication way easier or way harder
-- We're going to build our own event bus using Express. It'll not implement the vast majority of feature a normal bus has
+
